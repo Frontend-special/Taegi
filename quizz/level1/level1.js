@@ -30,6 +30,7 @@ function division(arr, count) {
     }
     return arr1;
 }
+
 console.log(division([1, 2, 3, 4, 5], 5));
 
 // arr = [1,2,3,4,5]
