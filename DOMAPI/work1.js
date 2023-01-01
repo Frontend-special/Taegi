@@ -1,42 +1,29 @@
-//1번
-window.onload = function () {
-    const a = document.querySelector(".disp");
-    a.innerText = "taegi";
-};
+/* 
+    1번
+    1.  "페이지가 로딩될 때 이곳의 글씨를 변경하시오"
+    이 걸 가져온다.
+    2. 가져 온 것에 text를 변경한다.
+    3. 페이지가 로딩 될 때 이니깐 window.onload를 활용
+*/
 
-//2번
-const tab = document.querySelectorAll(".tab");
-const content = document.querySelectorAll(".block");
+/* 
+    2번
+    1. 탭 1~6번까지 가져온다
+    2. 클릭한 탭의 html 태그를 가져온다
+    3. 가져온것탭만 색상 변경하고 배경색 변경한다.
+    4. 다시 다른탭을 클릭할 시 기존 탭 효과 지우고
+    새로 클릭한 탭 효과 넣어준다.
+*/
 
-for (let tb of tab) {
-    tb.addEventListener("click", () => {
-        for (let tb of tab) {
-            tb.classList.remove("gg");
-        }
-        tb.classList.add("gg");
-        const tx = tb.innerText;
-        active(tx);
-    });
-}
+/* 
+    3번
+    1. 위에 탭 클릭한것을 가져온다
+    2. class="block" 6개를 가져온다.
+    3. 2번에 가져온 탭과 block 내용과 비교한다
+    4. 비교해서 같은것만 보이게 한다.
+*/
 
-//3번
-const block = document.querySelectorAll(".block");
-
-function active(text) {
-    for (let blk of block) {
-        if (blk.innerHTML.includes(text)) {
-            blk.style.visibility = "visible";
-        } else {
-            blk.style.visibility = "hidden";
-        }
-    }
-}
-
-// 4번
-const inputNum = document.getElementById("te_input");
-inputNum.addEventListener("keypress", () => {
-    if (event.keyCode >= 48 && event.keyCode <= 57) {
-        event.returnValue = false;
-        alert("글자만 입력하세요.");
-    }
-});
+/*
+    4번
+    
+ */
