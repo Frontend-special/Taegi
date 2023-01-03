@@ -33,7 +33,6 @@ function solution2() {
     }
 }
 solution2();
-
 /* 
     3번
     1. 위에 탭 클릭한것을 가져온다
@@ -58,8 +57,6 @@ function solution3(text) {
     1. input에 입력을 할 때 마다 그 값을 받는다
     2. 정수만 입력을 해야한다.
     3. 아니면 alert로 메세지를 줘야한다.
-
-    4. 
  */
 document.querySelector;
 /*

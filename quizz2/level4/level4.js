@@ -7,6 +7,13 @@
 4. 단계별 구글링 키워드 생각하기
 
 기초 변수
+window.onload = function(){
+
+}
+window.onload = ()=>{
+    
+}
+
 
 let totalPage = 80;
 let currentPageIndx = 0;
