@@ -85,11 +85,15 @@ $button.addEventListener("click", () => {
 });
 /*
   1. $button 클릭 이벤트 추가
-  2. 만약  ul.children 즉 li가 한개 이상이면 ul을 비우고 시작
-  3. 80번째 줄 이해x
- */
+  2. 만약  ul.children 즉 li가 한개 이상이면 ul을 리셋하고 시작함
+  3. INGREDIENT_LIST 내용을 foreach로 돌린다.
+  4. 그래서 INGREDIENT_LIST에 있는 데이터를 HTML에 li로 추가
+  5. li의 innerText에 재료, 무게 넣고
+  6. append를 통해 li tag? 추가? 하는거같습니다.
+*/
 /*
   [구글링 키워드]
   1. js html 태그 추가
   2. js 객체 for문
+  6. js .create
 */
