@@ -58,7 +58,12 @@ function solution3(text) {
     2. 정수만 입력을 해야한다.
     3. 아니면 alert로 메세지를 줘야한다.
  */
-document.querySelector;
+let te_input = document.querySelector("#te_input");
+te_input.addEventListener("keypress", (txt) => {
+    console.log(txt);
+    console.log(txt.target.value);
+});
+
 /*
     5번
     1. input을 가져온다.
@@ -69,7 +74,6 @@ document.querySelector;
     6. 가져온 ul안에 li로 추가해야함
     7. 초기화 버튼을 누르면 li다 없애야함.   
 */
-
 /* 
     6번
 */
