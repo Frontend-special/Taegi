@@ -32,7 +32,10 @@ function deleteIngredient(e) {
   4. umm...
 */
 /*
-  
+  [구글링 키워드]
+  1. js 해당 요소 클릭 비교
+  2. js html 태그 삭제
+  3. 
 */
 
 $form.addEventListener("submit", (e) => {
