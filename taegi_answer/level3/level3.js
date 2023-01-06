@@ -6,7 +6,7 @@
   [구글링x 분석]
   1. 새로운 new Map() 생성 const INGREDIENT_LIST
 */
-
+let data = new Map();
 /*
   [구글링x 분석]
   1. 파라미터 e가 tr로 추정
@@ -20,6 +20,31 @@
   2. js html 태그 삭제
   3. 
 */
+let thead = document.querySelector(".thead");
+let ingredient = document.getElementsByName("ingredient")[0];
+let weight = document.getElementsByName("weight")[0];
+let ingredient_form = document.querySelector("#ingredient-form");
+ingredient_form.addEventListener("submit", (el) => {
+    el.preventDefault();
+    let ingredientValue = ingredient.value;
+    let weightValue = weight.value;
+    let push_value = document.createElement("td");
+    push_value.innerHTML = `
+    <tr class="thead">
+    <th>재료</th>
+     <td>ingredientValue</td>
+     <th>무게</th>
+     <td>weightValue</td>
+     <th>관리</th>
+     <td><button>삭제</button></td>
+     </tr>
+    `;
+    push_value.append(thead);
+    //둘다 입력이 없을때
+    if (!ingredientValue.length || !weightValue.length) {
+        alert("입력된 값이 없습니다.");
+    }
+});
 
 /*
   [구글링x 분석]
@@ -32,6 +57,7 @@
   7. 그리고 set을 통해 데이터 저장
   8. 54번째 줄부터는 이해 x
 */
+
 /*
   [구글링 키워드]
   1. js로 객체 만들기
