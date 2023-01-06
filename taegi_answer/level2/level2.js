@@ -46,6 +46,7 @@ user_phone.addEventListener("input", (e) => {
 */
 
 let form = document.querySelector("form");
+let reservation_number = document.querySelector("#reservation-number");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     let name1 = user_name.value;
@@ -58,20 +59,13 @@ form.addEventListener("submit", (e) => {
     let nameArr = RESERVATION_LIST.filter((el) => {
         return el.name === name1;
     });
+    if (!nameArr) return err();
     let phoneArr = nameArr.find((el) => {
         return phone1 === el.phone;
     });
-    let reservation_number = document.querySelector("#reservation-number");
-    reservation_number.innerHTML = "";
-    console.log(phoneArr);
-    if (phoneArr.phone === phone1) {
-        reservation_number.innerHTML = phoneArr.number;
-    }
-    //else가 왜....
-    else {
-        reservation_number.innerHTML = "이름 혹은 전화번호가 틀렸습니다.";
-        alert("이름 혹은 전화번호가 틀렸습니다.");
-    }
+    if (!phoneArr) return err();
+
+    reservation_number.innerHTML = phoneArr.number;
 });
 
 /*  
