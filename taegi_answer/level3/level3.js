@@ -6,7 +6,7 @@
   [구글링x 분석]
   1. 새로운 new Map() 생성 const INGREDIENT_LIST
 */
-let data = new Map();
+// let data = new Map();
 /*
   [구글링x 분석]
   1. 파라미터 e가 tr로 추정
@@ -20,31 +20,31 @@ let data = new Map();
   2. js html 태그 삭제
   3. 
 */
-let thead = document.querySelector(".thead");
-let ingredient = document.getElementsByName("ingredient")[0];
-let weight = document.getElementsByName("weight")[0];
-let ingredient_form = document.querySelector("#ingredient-form");
-ingredient_form.addEventListener("submit", (el) => {
-    el.preventDefault();
-    let ingredientValue = ingredient.value;
-    let weightValue = weight.value;
-    let push_value = document.createElement("td");
-    push_value.innerHTML = `
-    <tr class="thead">
-    <th>재료</th>
-     <td>ingredientValue</td>
-     <th>무게</th>
-     <td>weightValue</td>
-     <th>관리</th>
-     <td><button>삭제</button></td>
-     </tr>
-    `;
-    push_value.append(thead);
-    //둘다 입력이 없을때
-    if (!ingredientValue.length || !weightValue.length) {
-        alert("입력된 값이 없습니다.");
-    }
-});
+// let thead = document.querySelector(".thead");
+// let ingredient = document.getElementsByName("ingredient")[0];
+// let weight = document.getElementsByName("weight")[0];
+// let ingredient_form = document.querySelector("#ingredient-form");
+// ingredient_form.addEventListener("submit", (el) => {
+//     el.preventDefault();
+//     let ingredientValue = ingredient.value;
+//     let weightValue = weight.value;
+//     let push_value = document.createElement("td");
+//     push_value.innerHTML = `
+//     <tr class="thead">
+//     <th>재료</th>
+//      <td>ingredientValue</td>
+//      <th>무게</th>
+//      <td>weightValue</td>
+//      <th>관리</th>
+//      <td><button>삭제</button></td>
+//      </tr>
+//     `;
+//     push_value.append(thead);
+//     //둘다 입력이 없을때
+//     if (!ingredientValue.length || !weightValue.length) {
+//         alert("입력된 값이 없습니다.");
+//     }
+// });
 
 /*
   [구글링x 분석]
@@ -80,3 +80,29 @@ ingredient_form.addEventListener("submit", (el) => {
   2. js 객체 for문
   6. js .create
 */
+
+const $table = document.querySelector("table");
+const $ingredientForm = document.querySelector("#ingredient-form");
+const $ingredient = document.getElementsByName("ingredient")[0];
+const $tr = document.querySelector("tr");
+
+const $weight = document.getElementsByName("weight")[0];
+$ingredientForm.addEventListener("submit", (form) => {
+    form.preventDefault();
+    const ingredient_value = $ingredient.value;
+    const weight_value = $weight.value;
+
+    const push_tr = document.createElement("tr");
+    push_tr.innerHTML = `
+                <td>${ingredient_value}</td>
+                <td>${weight_value}</td>
+                <td><button>삭제</button></td>
+    `;
+    $table.append(push_tr);
+    del(push_tr);
+});
+
+function del(push_tr) {
+    let button = document.querySelector("button");
+    console.log(button);
+}
